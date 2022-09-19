@@ -3,7 +3,7 @@ const UserModel = require('../api/models/user');
 const mongoose = require('mongoose');
 const userData = { _id: new mongoose.Types.ObjectId(), firstname: "John", lastname: "Doe", email: "johndoe@gmail.com", password: "John..doe123", usertype: "customer" };
 
-const test_uri = "mongodb://localhost:27017/pp-test";
+const test_uri = "mongodb://localhost:27017/wasselni";
 
 describe('insert new user into collection', () => {
   beforeAll(async () => {

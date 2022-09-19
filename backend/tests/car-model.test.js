@@ -2,9 +2,9 @@
 const CarModel = require('../api/models/car');
 const LocationModel = require('../api/models/location');
 const mongoose = require('mongoose');
-const locationData = { _id: new mongoose.Types.ObjectId(), cars: [], name: "Test Garage", address: "30 Swanston Street, Vic, Melbourne" };
+const locationData = { _id: new mongoose.Types.ObjectId(), cars: [], name: "Test Garage", address: "ODC, Lac 1, Tunis" };
 
-const test_uri = "mongodb://localhost:27017/pp-test";
+const test_uri = "mongodb://localhost:27017/wasselni";
 
 let testLocation;
 
@@ -26,7 +26,7 @@ describe('insert new car into collection', () => {
 
   it('create and save location successfully', async () => {
     const carData = {
-      _id: new mongoose.Types.ObjectId(), make: "Honda", seats: 4, bodytype: "Sedan", numberplate: "TST100",
+      _id: new mongoose.Types.ObjectId(), make: "Honda", seats: 4, bodytype: "Sedan", numberplate: "220TN2300",
       colour: "black", costperhour: 10, fueltype: "Petrol", location: testLocation._id, currentBooking: null
     };
 
