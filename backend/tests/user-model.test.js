@@ -1,7 +1,7 @@
 /* User model tests */
 const UserModel = require('../api/models/user');
 const mongoose = require('mongoose');
-const userData = { _id: new mongoose.Types.ObjectId(), firstname: "Jonah", lastname: "Smith", email: "jonah1234@gmail.com", password: "foobar", usertype: "customer" };
+const userData = { _id: new mongoose.Types.ObjectId(), firstname: "John", lastname: "Doe", email: "johndoe@gmail.com", password: "John..doe123", usertype: "customer" };
 
 const test_uri = "mongodb://localhost:27017/pp-test";
 
@@ -31,7 +31,7 @@ describe('insert new user into collection', () => {
   });
 
   it('create user without required field should fail', async () => {
-    const invalidUserData = { _id: new mongoose.Types.ObjectId(), lastname: "Smith", email: "jonah1234@gmail.com", password: "foobar", usertype: "customer" };
+    const invalidUserData = { _id: new mongoose.Types.ObjectId(), lastname: "Doe", email: "johndoe@gmail.com", password: "John..doe123", usertype: "customer" };
 
     let err;
 
