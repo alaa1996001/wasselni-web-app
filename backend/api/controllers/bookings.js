@@ -326,7 +326,7 @@ exports.get_upcoming_booking = (req, res, next) => {
 }
 
 function localiseTimeZone(date) {
-    // hours offset from UTC for Melbourne (GMT+10)
+    // hours offset from UTC for Tunisia (GMT+1)
     date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
     return date;
 }
